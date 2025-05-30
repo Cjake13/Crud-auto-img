@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Vehículos</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-dark text-white">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-4 fw-bold" href="#">CRUD VEHICULOS</a>
+      <button class="btn btn-success ms-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="fas fa-car"></i> Agregar Vehículo
+      </button>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th>IMAGEN</th>
+            <th>MARCA</th>
+            <th>MODELO</th>
+            <th>AÑO</th>
+            <th>COSTO</th>
+            <th>PLACA</th>
+            <th>ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody id="listaVehiculos"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Vehículo</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="marca" class="form-control mb-2" placeholder="MARCA">
+          <input type="text" id="modelo" class="form-control mb-2" placeholder="MODELO">
+          <input type="text" id="año" class="form-control mb-2" placeholder="AÑO">
+          <input type="text" id="costo" class="form-control mb-2" placeholder="COSTO">
+          <input type="text" id="placa" class="form-control mb-2" placeholder="PLACA">
+          <input type="file" id="imagen" class="form-control mb-2" accept="image/*">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" id="btnGuardar" class="btn btn-dark">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  <script src="datacarro.js"></script>
+</body>
+</html>
